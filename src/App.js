@@ -3,6 +3,7 @@ import './App.css';
 import Engine from './Engine'
 import {
   AppContainer,
+  Loss,
   StyledConsole,
   StyledPlayArea,
   StyledPlayerWindow,
@@ -19,6 +20,7 @@ class App extends React.PureComponent{
       misses: 0,
       successAnswers:[],
       failedAnswers: [],
+      lost: false,
     }
   }
 
@@ -36,6 +38,10 @@ class App extends React.PureComponent{
 
   startInterval(){
     this.timer = setInterval(() => {
+      if(this.state.misses == 2){
+        this.setState({lost: true })
+        clearInterval(this.timer)
+      }
       if( this.state.phraseIndex >= this.state.phrases.length -1){
         console.log('Finished');
         clearInterval(this.timer)
@@ -43,18 +49,22 @@ class App extends React.PureComponent{
       this.setState({
         phraseIndex: this.state.phraseIndex + 1,
         misses: this.state.misses + 1,
+        failedAnswers: [...this.state.failedAnswers, this.state.phrases[this.state.phraseIndex]]
       });
-    }, 5000)
+    }, 10000)
   }
 
   phraseMet = () => {
     clearInterval(this.timer);
     this.startInterval();
-    this.setState({phraseIndex: this.state.phraseIndex+1})
+    this.setState({
+      phraseIndex: this.state.phraseIndex+1,
+      successAnswers: [...this.state.successAnswers, this.state.phrases[this.state.phraseIndex]]
+    })
   };
 
   render() {
-    const {phrases, phraseIndex, misses } = this.state;
+    const {phrases, phraseIndex, misses, lost } = this.state;
     return (
       <div className='screwYouRyan'>
         <h1 className="title">
@@ -77,6 +87,12 @@ class App extends React.PureComponent{
         <SprintDeadline>
           Sprint Deadline
         </SprintDeadline>
+        {lost &&
+          <Loss>
+            <h1>You Lose</h1>
+            <h1>Did you even check Stack Overflow?</h1>
+          </Loss>
+        }
       </AppContainer>
       </div>
       

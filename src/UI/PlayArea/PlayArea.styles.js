@@ -6,7 +6,7 @@ export const StyledPlayArea = styled.div`
   width: 100%;
   
   .animate {
-    animation: crawl 5s linear;
+    animation: crawl 10s linear;
   }
   
   @keyframes crawl {

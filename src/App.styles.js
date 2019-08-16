@@ -24,6 +24,13 @@ export const StyledPlayArea = styled(PlayArea)`
   flex: 1 1 ${1/3}%;
 `;
 
+export const Loss = styled.div`
+  position: absolute;
+  margin-top: 25vh;
+  width: 100%;
+  background-color: white;
+`;
+
 export const SprintDeadline = styled.div`
   font-family: 'VT323', monospace;
   width: ${1 / 3 * 100}%;
