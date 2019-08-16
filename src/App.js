@@ -1,8 +1,14 @@
 import React from 'react';
 import './App.css';
 import Engine from './Engine'
+import {
+  AppContainer,
+  StyledConsole,
+  StyledPlayArea,
+  StyledPlayerWindow,
+} from './App.styles';
 
-class App extends React.PureComponent {
+class App extends React.PureComponent{
   constructor(props){
     super(props);
     this.state = {
@@ -23,8 +29,8 @@ class App extends React.PureComponent {
         clearInterval(this.timer)
       }
       this.setState({
-        phraseIndex: this.state.phraseIndex + 1,
-        misses: this.state.misses + 1,
+      phraseIndex: this.state.phraseIndex + 1,
+      misses: this.state.misses + 1,
       })
     }, 5000)
   }
@@ -35,17 +41,24 @@ class App extends React.PureComponent {
     this.setState({phraseIndex: this.state.phraseIndex+1})
   };
 
-  render(){
+  render() {
     const {phrases, phraseIndex, misses } = this.state;
     return (
-      <div className="App">
-        <button onClick={this.startGame}>Start</button>
-        <h3>{phrases[phraseIndex]}</h3>
-        <h3>{misses}</h3>
-        <Engine currentWord={phrases[phraseIndex]} success={this.phraseMet}></Engine>
-      </div>
+      <AppContainer className="App">
+        <StyledPlayerWindow>
+
+        </StyledPlayerWindow>
+        <StyledPlayArea>
+          <button onClick={this.startGame}>Start</button>
+          <h3>{phrases[phraseIndex]}</h3>
+          <h3>{misses}</h3>
+          <Engine currentWord={phrases[phraseIndex]} success={this.phraseMet}></Engine>
+        </StyledPlayArea>
+        <StyledConsole>
+
+        </StyledConsole>
+      </AppContainer>
     );
   }
 }
-
 export default App;
