@@ -7,6 +7,7 @@ import {
   StyledPlayArea,
   StyledPlayerWindow,
 } from './App.styles';
+import Giphy from './Giphy';
 
 class App extends React.PureComponent{
   constructor(props){
@@ -52,7 +53,7 @@ class App extends React.PureComponent{
     return (
       <AppContainer className="App">
         <StyledPlayerWindow>
-
+          <Giphy misses={misses}/>
         </StyledPlayerWindow>
         <StyledPlayArea>
 
