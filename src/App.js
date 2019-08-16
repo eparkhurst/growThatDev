@@ -6,6 +6,7 @@ import {
   StyledConsole,
   StyledPlayArea,
   StyledPlayerWindow,
+  SprintDeadline,
 } from './App.styles';
 import Giphy from './Giphy';
 
@@ -68,6 +69,9 @@ class App extends React.PureComponent{
           <h3>{misses}</h3>
           <Engine currentWord={phrases[phraseIndex]} success={this.phraseMet}></Engine>
         </StyledConsole>
+        <SprintDeadline>
+          Sprint Deadline
+        </SprintDeadline>
       </AppContainer>
     );
   }
