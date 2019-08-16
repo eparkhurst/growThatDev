@@ -37,6 +37,8 @@ class App extends React.PureComponent {
     return (
       <div className="App">
         <h3>{phrases[phraseIndex]}</h3>
+
+        HELP
         <h3>{misses}</h3>
         <Engine currentWord={phrases[phraseIndex]} success={this.phraseMet}></Engine>
       </div>
