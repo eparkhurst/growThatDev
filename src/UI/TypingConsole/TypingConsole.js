@@ -43,10 +43,7 @@ class TypingConsole extends React.PureComponent {
         </CursorContainer>
         <TextWindow>
           <div>
-           Old Text
-          </div>
-          <div>
-           New Text
+           Enter text here:
           </div>
           <InputDisplay>
             {this.state.value}
