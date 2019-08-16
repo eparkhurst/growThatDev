@@ -54,7 +54,7 @@ class App extends React.PureComponent{
         <StyledPlayerWindow>
 
         </StyledPlayerWindow>
-        <StyledPlayArea>
+        <StyledPlayArea currentWord={phrases[phraseIndex]}>
 
         </StyledPlayArea>
         <StyledConsole>
