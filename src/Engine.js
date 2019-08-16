@@ -8,10 +8,15 @@ class Engine extends React.Component {
     }
   }
 
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if(prevProps.currentWord !== this.props.currentWord){
+      this.setState({value: ''});
+    }
+  }
+
   handleChange = (e) => {
     const { currentWord } = this.props;
     if (e.target.value === currentWord){
-      this.setState({value: ''});
       this.props.success();
     } else{
       this.setState({value:e.target.value})

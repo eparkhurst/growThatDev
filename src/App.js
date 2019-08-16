@@ -8,24 +8,36 @@ class App extends React.PureComponent {
     this.state = {
       phrases : ['hello', 'good bye', 'other', 'other2'],
       phraseIndex: 0,
+      misses: 0,
     }
   }
 
   componentDidMount() {
+    this.startInterval();
+  }
+
+  startInterval(){
     this.timer = setInterval(() => {
       console.log('hit');
-      this.setState({phraseIndex: this.state.phraseIndex + 1})
-    }, 2000)
+      if(this.state.phrases.length <= this.state.phraseIndex){
+        clearInterval(this.timer)
+      }
+      // this.setState({phraseIndex: this.state.phraseIndex + 1, misses: this.state})
+    }, 5000)
   }
+
   phraseMet = () => {
-    console.log('Got the phrase');
-    this.setState({phraseIndex:this.state.phraseIndex+1})
-  }
+    clearInterval(this.timer);
+    this.startInterval();
+    this.setState({phraseIndex: this.state.phraseIndex+1})
+  };
+
   render(){
-    const {phrases, phraseIndex } = this.state;
+    const {phrases, phraseIndex, misses } = this.state;
     return (
       <div className="App">
         <h3>{phrases[phraseIndex]}</h3>
+        <h3>{misses}</h3>
         <Engine currentWord={phrases[phraseIndex]} success={this.phraseMet}></Engine>
       </div>
     );
