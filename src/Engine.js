@@ -1,10 +1,10 @@
 import React from 'react';
 
 class Engine extends React.Component {
-  phrases = ['hello'];
 
   handleChange = (e) => {
-    if (e.target.value === this.phrases[0]){
+    const { currentWord } = this.props;
+    if (e.target.value === currentWord){
       console.log('you got it');
     }
     console.log(e.target.value);
