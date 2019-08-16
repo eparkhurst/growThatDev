@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 
 export const StyledConsoleWindow = styled.div`
-  @import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
-  font-family: 'VT323', monospace;
   background: #333;
   color: #ddd;
-  height: 100vh;
+  max-height: 100%;
   width: 100%;
   font-size: 30px;
   display: flex;

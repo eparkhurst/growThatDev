@@ -51,7 +51,7 @@ class Giphy extends Component {
       stress = 'low';
     } else if(misses ===1){
       stress = 'mid';
-    } else if(misses === 2){
+    } else if(misses >= 2){
       stress = 'high';
     }
 
