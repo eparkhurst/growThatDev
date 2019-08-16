@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const StyledPlayArea = styled.div`
-  background: green;
+  background: #ccc;
   height: 100vh;
+  width: 100%;
 `
+

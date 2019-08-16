@@ -6,7 +6,8 @@ class PlayArea extends React.PureComponent {
     return (
       <StyledPlayArea
         {...this.props}
-      />
+      >
+      </StyledPlayArea>
     )
   }
 };
