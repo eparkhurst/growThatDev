@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const StyledConsoleWindow = styled.div`
-  @import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
-  font-family: 'VT323', monospace;
   background: #333;
   color: #ddd;
   max-height: 100%;
