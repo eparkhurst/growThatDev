@@ -16,9 +16,22 @@ class TypingConsole extends React.PureComponent {
     this.inputRef = React.createRef();
   }
 
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if(prevProps.currentWord !== this.props.currentWord){
+      this.setState({value: ''});
+    }
+  }
+
   refocusInput = () => this.inputRef.current.focus();
 
-  handleChange = e => this.setState({ value: e.target.value })
+  handleChange = (e) => {
+    const { currentWord } = this.props;
+    if (e.target.value === currentWord){
+      this.props.success();
+    } else{
+      this.setState({value:e.target.value})
+    }
+  };
 
   render() {
     return (

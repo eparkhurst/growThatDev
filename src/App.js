@@ -29,6 +29,10 @@ class App extends React.PureComponent{
     this.startInterval();
   };
 
+  componentDidMount() {
+    this.startGame();
+  }
+
   startInterval(){
     this.timer = setInterval(() => {
       if( this.state.phraseIndex >= this.state.phrases.length -1){
@@ -55,10 +59,10 @@ class App extends React.PureComponent{
         <StyledPlayerWindow>
           <Giphy misses={misses}/>
         </StyledPlayerWindow>
-        <StyledPlayArea>
+        <StyledPlayArea currentWord={phrases[phraseIndex]}>
 
         </StyledPlayArea>
-        <StyledConsole>
+        <StyledConsole currentWord={phrases[phraseIndex]} success={this.phraseMet}>
           <button onClick={this.startGame}>Start</button>
           <h3>{phrases[phraseIndex]}</h3>
           <h3>{misses}</h3>
