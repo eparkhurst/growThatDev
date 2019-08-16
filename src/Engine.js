@@ -1,18 +1,26 @@
 import React from 'react';
 
 class Engine extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state ={
+      value:''
+    }
+  }
 
   handleChange = (e) => {
     const { currentWord } = this.props;
     if (e.target.value === currentWord){
-      console.log('you got it');
+      this.setState({value: ''});
+      this.props.success();
+    } else{
+      this.setState({value:e.target.value})
     }
-    console.log(e.target.value);
   };
 
   render() {
     return <div>
-      <input type="text" onChange={this.handleChange}/>
+      <input value={this.state.value} type="text" onChange={this.handleChange}/>
     </div>
   }
 }
