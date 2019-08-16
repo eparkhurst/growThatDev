@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94710b74-81cd-42ad-a38e-fa485511b370" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/App.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/PlayArea/PlayArea.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/PlayArea/PlayArea.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/PlayArea/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/PlayerWindow/PlayerWindow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/PlayerWindow/PlayerWindow.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/PlayerWindow/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/TypingConsole/TypingConsole.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/TypingConsole/TypingConsole.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/TypingConsole/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+            <state relative-caret-position="632">
+              <caret line="57" column="87" selection-start-line="57" selection-start-column="87" selection-end-line="57" selection-end-column="87" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -84,6 +71,26 @@
               <item name="grow-that-dev" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="grow-that-dev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grow-that-dev" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="grow-that-dev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grow-that-dev" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="PlayerWindow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="grow-that-dev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grow-that-dev" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="TypingConsole" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -121,12 +128,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565984668220</updated>
-      <workItem from="1565984669340" duration="4723000" />
+      <workItem from="1565984669340" duration="5052000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4723000" />
+    <option name="totallyTimeSpent" value="5052000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -134,11 +141,11 @@
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24954791" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17962629" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.29489797" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.12653062" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -165,8 +172,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        <state relative-caret-position="632">
+          <caret line="57" column="87" selection-start-line="57" selection-start-column="87" selection-end-line="57" selection-end-column="87" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

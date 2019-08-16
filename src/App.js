@@ -49,13 +49,13 @@ class App extends React.PureComponent{
 
         </StyledPlayerWindow>
         <StyledPlayArea>
+
+        </StyledPlayArea>
+        <StyledConsole>
           <button onClick={this.startGame}>Start</button>
           <h3>{phrases[phraseIndex]}</h3>
           <h3>{misses}</h3>
           <Engine currentWord={phrases[phraseIndex]} success={this.phraseMet}></Engine>
-        </StyledPlayArea>
-        <StyledConsole>
-
         </StyledConsole>
       </AppContainer>
     );
