@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledPlayArea = styled.div`
   background: #ccc;
-  height: 100vh;
+  max-height: 100%;  
   width: 100%;
   
   .animate {

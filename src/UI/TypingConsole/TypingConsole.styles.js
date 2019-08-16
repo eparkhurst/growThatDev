@@ -5,7 +5,7 @@ export const StyledConsoleWindow = styled.div`
   font-family: 'VT323', monospace;
   background: #333;
   color: #ddd;
-  height: 100vh;
+  max-height: 100%;
   width: 100%;
   font-size: 30px;
   display: flex;

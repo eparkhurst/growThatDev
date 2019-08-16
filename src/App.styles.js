@@ -7,6 +7,9 @@ export const AppContainer = styled.div`
   @import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
   display: flex;
   flex-flow: row;
+  min-height: 100vh;
+  max-height: 100vh;
+  height: 100vh;
 `;
 
 export const StyledConsole = styled(TypingConsole)`
