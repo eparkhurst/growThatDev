@@ -66,7 +66,12 @@ class App extends React.PureComponent{
   render() {
     const {phrases, phraseIndex, misses, lost } = this.state;
     return (
-      <AppContainer className="App">
+      <div className='screwYouRyan'>
+        <h1 className="title">
+          Grow that Dev
+        </h1>  
+        <AppContainer className="App">
+        
         <StyledPlayerWindow>
           <Giphy misses={misses}/>
         </StyledPlayerWindow>
@@ -89,6 +94,8 @@ class App extends React.PureComponent{
           </Loss>
         }
       </AppContainer>
+      </div>
+      
     );
   }
 }
