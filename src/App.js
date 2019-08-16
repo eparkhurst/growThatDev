@@ -6,9 +6,16 @@ class App extends React.PureComponent {
   constructor(props){
     super(props);
     this.state = {
-      phrases : ['hello', 'good bye'],
+      phrases : ['hello', 'good bye', 'other', 'other2'],
       phraseIndex: 0,
     }
+  }
+
+  componentDidMount() {
+    this.timer = setInterval(() => {
+      console.log('hit');
+      this.setState({phraseIndex: this.state.phraseIndex + 1})
+    }, 2000)
   }
   phraseMet = () => {
     console.log('Got the phrase');
