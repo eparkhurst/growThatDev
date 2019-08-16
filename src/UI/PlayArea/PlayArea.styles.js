@@ -4,7 +4,8 @@ export const StyledPlayArea = styled.div`
   background: #ccc;
   height: 100vh;
   width: 100%;
-  
+  font-size: 30px;
+
   .animate {
     animation: crawl 10s linear;
   }

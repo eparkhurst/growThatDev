@@ -15,7 +15,7 @@ class App extends React.PureComponent{
   constructor(props){
     super(props);
     this.state = {
-      phrases : ['git pull','int i = 0;','git push','color: #303','for(i < 5) {i++;}','display: flex;','{...this.props}','backdrop : yellow;','public dev() {};','decimal dollaBill = 500.00;','public class dev extends denver{}','Boolean iAmCool = true;','console.log(growThatDev};','Boolean dvlpDnvr = true;','if(numBeers < 3) Boolean ballmerPeak = false;'],
+      phrases : [' a really long one ti test if it looks good or not','git pull','int i = 0;','git push','color: #303','for(i < 5) {i++;}','display: flex;','{...this.props}','backdrop : yellow;','public dev() {};','decimal dollaBill = 500.00;','public class dev extends denver{}','Boolean iAmCool = true;','console.log(growThatDev};','Boolean dvlpDnvr = true;','if(numBeers < 3) Boolean ballmerPeak = false;'],
       phraseIndex: -1,
       misses: 0,
       successAnswers:[],
@@ -69,9 +69,9 @@ class App extends React.PureComponent{
       <div className='screwYouRyan'>
         <h1 className="title">
           Grow that Dev
-        </h1>  
+        </h1>
         <AppContainer className="App">
-        
+
         <StyledPlayerWindow>
           <Giphy misses={misses}/>
         </StyledPlayerWindow>
@@ -95,7 +95,7 @@ class App extends React.PureComponent{
         }
       </AppContainer>
       </div>
-      
+
     );
   }
 }
