@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
 import Low_1 from './Assets/low-1.gif';
 import Low_2 from './Assets/low-2.gif';
@@ -30,6 +31,10 @@ import High_7 from './Assets/high-7.gif';
 import High_8 from './Assets/high-8.gif';
 import High_9 from './Assets/high-9.gif';
 
+export const Gif = styled.img`
+  width:100%;
+`;
+
 const images={
   low: [Low_1, Low_2, Low_3, Low_4, Low_5, Low_6, Low_7, Low_8, Low_9],
   mid: [Mid_1, Mid_2, Mid_3, Mid_4, Mid_5, Mid_6, Mid_7, Mid_8, Mid_9],
@@ -38,15 +43,15 @@ const images={
 
 class Giphy extends Component {
   render() {
-    const {miss} = this.props;
+    const {misses} = this.props;
     let image;
     let stress;
 
-    if(miss===0){
+    if(misses===0){
       stress = 'low';
-    } else if(miss ===1){
+    } else if(misses ===1){
       stress = 'mid';
-    } else if(miss === 2){
+    } else if(misses === 2){
       stress = 'high';
     }
 
@@ -56,7 +61,7 @@ class Giphy extends Component {
     
     return (
       <div>
-        {<img src={image} alt=""/>}
+        {<Gif src={image} alt=""/>}
       </div>
     );
   }

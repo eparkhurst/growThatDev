@@ -1,30 +1,5 @@
 import React from 'react';
 import './App.css';
-<<<<<<< HEAD
-import Giphy from './Giphy';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Giphy miss={2}/>
-      </header>
-    </div>
-  );
-}
-=======
 import Engine from './Engine'
 import {
   AppContainer,
@@ -32,6 +7,7 @@ import {
   StyledPlayArea,
   StyledPlayerWindow,
 } from './App.styles';
+import Giphy from './Giphy';
 
 class App extends React.PureComponent{
   constructor(props){
@@ -71,14 +47,13 @@ class App extends React.PureComponent{
     this.startInterval();
     this.setState({phraseIndex: this.state.phraseIndex+1})
   };
->>>>>>> master
 
   render() {
     const {phrases, phraseIndex, misses } = this.state;
     return (
       <AppContainer className="App">
         <StyledPlayerWindow>
-
+          <Giphy misses={misses}/>
         </StyledPlayerWindow>
         <StyledPlayArea>
 
