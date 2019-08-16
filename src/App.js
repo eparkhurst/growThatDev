@@ -12,7 +12,7 @@ class App extends React.PureComponent{
   constructor(props){
     super(props);
     this.state = {
-      phrases : ['hello', 'good bye', 'other', 'other2'],
+      phrases : ['git pull,int i = 0;','git push,color: #303','for(i < 5) {i++;}','display: flex;','{...this.props}','backdrop : yellow;','public dev() {};','decimal dollaBill = 500.00;','public class dev extends denver{}','Boolean iAmCool = true;','console.log(growThatDev};','Boolean dvlpDnvr = true;','if(numBeers < 3) Boolean ballmerPeak = false;'],
       phraseIndex: -1,
       misses: 0,
     }
