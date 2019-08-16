@@ -14,7 +14,7 @@ class App extends React.PureComponent{
   constructor(props){
     super(props);
     this.state = {
-      phrases : ['git pull,int i = 0;','git push,color: #303','for(i < 5) {i++;}','display: flex;','{...this.props}','backdrop : yellow;','public dev() {};','decimal dollaBill = 500.00;','public class dev extends denver{}','Boolean iAmCool = true;','console.log(growThatDev};','Boolean dvlpDnvr = true;','if(numBeers < 3) Boolean ballmerPeak = false;'],
+      phrases : ['git pull','int i = 0;','git push','color: #303','for(i < 5) {i++;}','display: flex;','{...this.props}','backdrop : yellow;','public dev() {};','decimal dollaBill = 500.00;','public class dev extends denver{}','Boolean iAmCool = true;','console.log(growThatDev};','Boolean dvlpDnvr = true;','if(numBeers < 3) Boolean ballmerPeak = false;'],
       phraseIndex: -1,
       misses: 0,
       successAnswers:[],
@@ -29,6 +29,10 @@ class App extends React.PureComponent{
     });
     this.startInterval();
   };
+
+  componentDidMount() {
+    this.startGame();
+  }
 
   startInterval(){
     this.timer = setInterval(() => {
@@ -56,10 +60,10 @@ class App extends React.PureComponent{
         <StyledPlayerWindow>
           <Giphy misses={misses}/>
         </StyledPlayerWindow>
-        <StyledPlayArea>
+        <StyledPlayArea currentWord={phrases[phraseIndex]}>
 
         </StyledPlayArea>
-        <StyledConsole>
+        <StyledConsole currentWord={phrases[phraseIndex]} success={this.phraseMet}>
           <button onClick={this.startGame}>Start</button>
           <h3>{phrases[phraseIndex]}</h3>
           <h3>{misses}</h3>
